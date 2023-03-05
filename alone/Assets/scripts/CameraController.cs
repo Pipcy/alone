@@ -4,8 +4,8 @@ public class CameraController : MonoBehaviour
 {
     public Transform player1;
     public Transform player2;
-    public float minDistance = 20f;
-    public float maxDistance = 50f;
+    public float minDistance =10f;
+    public float maxDistance = 30f;
     public float followSpeed = 10f; // added follow speed
 
     private float defaultSize;
@@ -24,10 +24,6 @@ public class CameraController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, newPosition, followSpeed * Time.deltaTime);
 
         if (distance > minDistance)
-        {
-            //GameObject.enabled = false;
-        }
-        else if (distance > minDistance)
         {
             float newSize = distance / 2f;
             Camera.main.orthographicSize = Mathf.Clamp(newSize, minDistance, maxDistance);// make sure to tag "main camera"
