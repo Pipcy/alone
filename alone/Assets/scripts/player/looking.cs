@@ -37,7 +37,7 @@ public class looking : MonoBehaviour
         
             if (found.collider != null)
             {
-                Debug.Log("found!!!");
+                //Debug.Log("found!!!");
             }
         }
     }

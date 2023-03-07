@@ -42,7 +42,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            Camera.main.orthographicSize = defaultSize;
+            Camera.main.orthographicSize = 8;
         }
     }
 
