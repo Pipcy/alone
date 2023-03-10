@@ -26,7 +26,7 @@ public class Key : MonoBehaviour
     }
     
     private void OnTriggerEnter2D(Collider2D collision) { 
-        if (collision.gameObject.tag == "Player1") {
+        if (collision.gameObject.tag == "Player2") {
             foundKey = true;}
     }
 
