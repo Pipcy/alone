@@ -11,7 +11,7 @@ public class looking : MonoBehaviour
     private Vector3[] directions = new Vector3[2];
     private Vector3 destination;
 
-
+    public bool Isfound = false;
 
 
     void Update()
@@ -37,7 +37,7 @@ public class looking : MonoBehaviour
         
             if (found.collider != null)
             {
-                //Debug.Log("found!!!");
+                Isfound = true;
             }
         }
     }

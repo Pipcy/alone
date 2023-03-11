@@ -11,12 +11,22 @@ public class BigDoor : MonoBehaviour
     public TextMeshProUGUI doorLocked1;
     public TextMeshProUGUI doorLocked2;
     public TextMeshProUGUI waitForHer;
+    public TextMeshProUGUI waitForHim;//
 
     Key keyScript;
+    looking lookscript;
+
+    Flower flowerscrpit;
     void Start()
     {
+        GameObject flower = GameObject.Find("flower");
+        flowerscrpit = flower.GetComponent<Flower>();
+ 
         GameObject keyy =  GameObject.Find("key");
         keyScript = keyy.GetComponent<Key>();
+
+        GameObject playerlook =  GameObject.Find("player2");
+        lookscript = playerlook.GetComponent<looking>();
 
         unlockDoor.interactable = false;
 
@@ -24,6 +34,7 @@ public class BigDoor : MonoBehaviour
         doorLocked1.gameObject.SetActive(false);
         doorLocked2.gameObject.SetActive(false);
         waitForHer.gameObject.SetActive(false);
+        waitForHim.gameObject.SetActive(false);
 
     }
 
@@ -32,7 +43,15 @@ public class BigDoor : MonoBehaviour
         if (collision.gameObject.tag == "Player1")
         {
             if(keyScript.keypicked) {
-                unlockDoor.interactable = true;
+                if(lookscript.Isfound == false)
+                {
+                    waitForHim.gameObject.SetActive(true);
+                }
+                else
+                {
+                    unlockDoor.interactable = true;
+                }
+                
                 //extra: if check time
             }
             else{
@@ -57,6 +76,7 @@ public class BigDoor : MonoBehaviour
         doorLocked1.gameObject.SetActive(false);
         doorLocked2.gameObject.SetActive(false);
         waitForHer.gameObject.SetActive(false);
+        waitForHim.gameObject.SetActive(false);
     }
 
     public void UnlockDoor()
@@ -64,7 +84,15 @@ public class BigDoor : MonoBehaviour
         Debug.Log("Door unlocked.");
             //animation
             //sound effect
-        SceneManager.LoadScene("EndingWin"); 
+
+        if(flowerscrpit.Flowerpicked)
+        {
+            SceneManager.LoadScene("WinRomance"); 
+        }
+        else
+        {
+            SceneManager.LoadScene("Win"); 
+        }
 
         
     }

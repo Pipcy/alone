@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/EndingWin.unity
     guid: 41b311772ae80439aab45dd5668d9414
   - enabled: 1
-    path: Assets/Scenes/EndingLost.unity
-    guid: 3eb2a6cb7f21b47fe970ee865bd7c1ae
+    path: Assets/Scenes/Lost.unity
+    guid: 2c90ba1af1cd1e945a0b263ab23df915
+  - enabled: 1
+    path: Assets/Scenes/credit.unity
+    guid: c8bca44c595356841b4eff939d8706e2
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 696eebfd1cdb1b94aaaf73201d02e772
+  - enabled: 1
+    path: Assets/Scenes/WinRomance.unity
+    guid: 3a6a617e4407d7946b1513a71e457b73
   m_configObjects: {}

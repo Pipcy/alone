@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;//****
 
 public class sceneChange : MonoBehaviour
 {
+    
 
     public void AloadTitle() {
         SceneManager.LoadScene("Title"); }
@@ -15,11 +16,12 @@ public class sceneChange : MonoBehaviour
     public void Astart(){
         SceneManager.LoadScene("SampleScene"); }
 
-    public void Awin(){
-        SceneManager.LoadScene("EndingWin"); }
     
     public void Alose(){
         SceneManager.LoadScene("EndingLost"); }
+
+    public void Acredit(){
+        SceneManager.LoadScene("credit"); }
 
 
 
