@@ -207,7 +207,7 @@ public class DayNightScript : MonoBehaviour
  
             if (activateLights == false) // if lights havent been turned on
             {
-                if (mins > 20) // wait until pretty dark
+                if (mins > 50) // wait until pretty dark
                 {
                     for (int i = 0; i < lights.Length; i++)
                     {
